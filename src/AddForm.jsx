@@ -27,6 +27,7 @@ export default function AddForm({ setShoppingList }) {
                  setError("Fyll ut antall.")
         } else {
 
+
         const itemToAdd = {
             id: crypto.randomUUID(),
             name: newItem.name,
@@ -37,11 +38,18 @@ export default function AddForm({ setShoppingList }) {
         // Her gjør den slik at nyeste varen legges øverst i listen.
         setShoppingList((prev) => [itemToAdd, ...prev])
 
+        //Fikk opp feilmelding når jeg testet
+        //Med kun vare, og la til antall etterpå. Da ble ikke feilmeldingen borte.
+        //Med setError("") så blir det en tom streng som gjør at det blir sendt på nytt.
+        //La også til setNewItem slik at tekst boksen skal nullstille seg etter jeg la til vare.
+        setError("")
+        setNewItem({name: "", amount: ""})
+       
 
         }}}}
 
     return (
-        <section className="todoform">
+        <section className="shopping-form">
             <form onSubmit={handleSubmit}>
                 <label htmlFor="name">Vare</label>
                 <input

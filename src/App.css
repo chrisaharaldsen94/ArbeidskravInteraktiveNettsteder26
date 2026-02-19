@@ -1,3 +1,5 @@
+/* [https://gemini.google.com/share/c9f5ec10a04c] Fikk hjelp av Google gemini til CSS da dette ikke var ett direkte krav,
+men jeg ville ha det "stilrent" . Jeg har gjort en del endringer selv i selve CSS'en. */
 * {
   box-sizing: border-box;
 }
@@ -29,23 +31,20 @@ h1 {
   font-weight: 800;
 }
 
-
-.todoform form {
+.shopping-form form {
   display: flex;
   flex-direction: column;
 }
 
-
-.todoform label {
+.shopping-form label {
   font-weight: 500;
   margin-bottom: 0.5rem;
   margin-top: 1rem;
   display: block;
 }
 
-
-.todoform input[type="text"],
-.todoform input[type="number"] {
+.shopping-form input[type="text"],
+.shopping-form input[type="number"] {
   width: 100%;
   padding: 1rem;
   border: 1px solid #e5e5e5;
@@ -55,18 +54,15 @@ h1 {
   outline: none;
 }
 
-
-.todoform input::placeholder {
+.shopping-form input::placeholder {
   color: #999;
 }
 
-
-.todoform input:focus {
+.shopping-form input:focus {
     border-color: #888;
 }
 
-
-.todoform button {
+.shopping-form button {
   margin-top: 1.5rem;
   width: 100%;
   padding: 1rem;
@@ -79,26 +75,22 @@ h1 {
   cursor: pointer;
 }
 
-.todoform button:hover {
-  opacity: 0.9;
-}
-
 .flex-r {
     margin-top: 2rem;
 }
+
 .flex-r h2 {
     display: none; 
 }
 
-.todo-card {
+.shopping-item {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0.8rem 0;
- 
 }
 
-.todo-card label {
+.shopping-item label {
     display: flex;
     align-items: center;
     gap: 12px; 
@@ -107,14 +99,14 @@ h1 {
     font-size: 1.1rem;
 }
 
-.todo-card input[type="checkbox"] {
+.shopping-item input[type="checkbox"] {
     width: 22px;
     height: 22px;
     accent-color: #007bff; 
     cursor: pointer;
 }
 
-.todo-card input[type="number"] {
+.shopping-item input[type="number"] {
     width: 60px;
     border: none; 
     background: transparent;

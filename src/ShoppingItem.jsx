@@ -1,16 +1,16 @@
 export default function ShoppingItem({ item, setShoppingList }) {
     
-    // Funksjon for å endre "kjøpt"-status
+    //Funksjon for å endre status på "kjøpt"
     const handleCheck = () => {
         setShoppingList((prev) => 
             prev.map((i) => i.id === item.id ? { ...i, bought: !i.bought } : i)
         )
     }
 
-    // Funksjon for å endre antall direkte i listen
+    //Funkjson for å direkte endre antall i listen
     const handleAmountChange = (e) => {
         const newAmount = parseInt(e.target.value)
-        if (newAmount > 0) { // Forhindrer 0 eller negative verdier
+        if (newAmount > 0) {
             setShoppingList((prev) => 
                 prev.map((i) => i.id === item.id ? { ...i, amount: newAmount } : i)
             )
@@ -18,7 +18,7 @@ export default function ShoppingItem({ item, setShoppingList }) {
     }
 
     return (
-        <article className="todo-card">
+        <article className="shopping-item">
             <label>
                 <input 
                     type="checkbox" 
