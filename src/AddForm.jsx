@@ -35,7 +35,7 @@ export default function AddForm({ setShoppingList }) {
             bought: false
         }
 
-        // Her gjør den slik at nyeste varen legges øverst i listen.
+        //Her gjør den slik at nyeste varen legges øverst i listen.
         setShoppingList((prev) => [itemToAdd, ...prev])
 
         //Fikk opp feilmelding når jeg testet

@@ -8,7 +8,7 @@ import ShoppingList from './ShoppingList'
 import './App.css'
 
 function App() {
-  //Starter med minst 2 varer der en er markert som allerede kjøpt.
+//Starter med minst 2 varer der en er markert som allerede kjøpt.
   const initialItems = [
     { id: crypto.randomUUID(), name: "Melk", amount: 2, bought: false },
     { id: crypto.randomUUID(), name: "Egg", amount: 1, bought: true }
